@@ -7,7 +7,14 @@ Cypress automation tests for FoxStone.
 - node - 18
 - npm - 10
 
-## Getting started
+## One liner setup
+
+In order to clone repo, install packages and run rightaway tests use next command:
+`git clone git@github.com:minjawork/minja-foxstone-QA-test.git && cd minja-foxstone-QA-test && npm install && npm run test`
+
+## Regular setup
+
+If you don't want to use one liner, while to go step by step, follow next steps:
 
 1. Install dependencies by running cmmand inside root directory : `npm install`
 2. Check installed versions:
