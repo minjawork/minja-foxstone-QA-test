@@ -1,0 +1,5 @@
+{
+    "resetPasswordEmailSent":"The reset password email was sent. Please check your email for further instructions.",
+    "forgotPasswordUrl" : "https://sso.foxstone.co/en/forgot-pass",
+    "offeringsUrl" : "https://app.foxstone.co/en/offerings"
+}
