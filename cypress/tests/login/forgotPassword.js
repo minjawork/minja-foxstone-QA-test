@@ -52,7 +52,7 @@ describe("Forgot password tests", () => {
       resetLink = response.body.link;
       newPassword = faker.internet.password({
         length: 10,
-        pattern: /[A-Za-z0-9]/,
+        pattern: /\w/,
       });
 
       expect(response.body).to.have.property("link", resetLink);
@@ -61,7 +61,6 @@ describe("Forgot password tests", () => {
       cy.visit(resetLink);
       ChangePasswordPage.newPasswordInput.click();
       ChangePasswordPage.newPasswordInput.type(newPassword);
-      console.log("NEW PASSWORD!!!" + " " + newPassword);
       ChangePasswordPage.changePasswordButton.click();
       LoginPage.head.should("be.visible");
       LoginPage.head.should("have.text", "Login");
