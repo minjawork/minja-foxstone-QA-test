@@ -27,6 +27,17 @@ describe("Forgot password tests", () => {
     cy.url().should("eq", data.forgotPasswordUrl);
   });
 
+  it("shouldn't reset password with non existing account ", () => {
+    LoginPage.forgotPassword.click();
+    ForgotPasswordPage.emailAddressInput.click();
+    ForgotPasswordPage.emailAddressInput.type(user.nonExistingEmail);
+    ForgotPasswordPage.resetPassword.click();
+    ForgotPasswordPage.nonExistingEmail.should(
+      "have.text",
+      data.emailDoesntExist
+    );
+  });
+
   it("should show alert after user clicks on a password reset button", () => {
     LoginPage.forgotPassword.click();
     ForgotPasswordPage.emailAddressInput.click();
