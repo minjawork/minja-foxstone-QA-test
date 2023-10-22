@@ -4,7 +4,7 @@
   "description": "Cypress automation tests for FoxStone project",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run --headed --reporter mochawesome",
+    "test": "cypress run --reporter mochawesome",
     "cy": "cypress run --browser chrome",
     "cy:chrome": "cypress run --headed --browser chrome"
   },
